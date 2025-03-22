@@ -1,0 +1,74 @@
+.navbar{
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Glass effect */
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  z-index: 1000;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+}
+.menuItem {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.menuItem:hover {
+    color: #f0a500; 
+}
+/* Hamburger icon (hidden on large screens) */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.mobileMenu {
+    
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 10px 0;
+}
+.mobileMenuItem {
+    
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.mobileMenuItem:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive: Show hamburger menu on mobile screens */
+@media (max-width: 768px) {
+    .menu {
+      display: none; /* Hide menu on small screens */
+    }
+  
+    .hamburger {
+      display: block; /* Show hamburger */
+    }
+  
+    .mobileMenu {
+      display: block;
+    }
+}
